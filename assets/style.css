@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  display: grid;
+  place-items: center;
+  /* background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%); */
+  background-color: #0abcf9;
+  background-image: linear-gradient(315deg, #0abcf9 0%, #2c69d1 74%);
+
+
+
+
+  color: #fff;
+  overflow: hidden;
+  user-select: none;
+}
+
+.center-con {
+  position: relative;
+}
+
+.center-con::after,
+.center-con::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-con::before {
+  left: 100%;
+  top: 100%;
+  background-image: var(--gr-2);
+}
+
+.calc {
+  overflow: hidden;
+  position: relative;
+  width: 18rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.display {
+  overflow: hidden;
+  position: relative;
+  height: 10rem;
+}
+
+.screen {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0.5rem;
+  width: 94%;
+  font-size: 3em;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  text-align: right;
+}
+
+.operators {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  z-index: -1;
+}
+
+.buttons {
+  height: 20rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.buttons>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  font-size: 1.2em;
+}
+
+.buttons>div:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.buttons>div:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+sup {
+  font-size: 0.8em;
+  transform: translateY(-6px);
+}
